@@ -1,0 +1,26 @@
+.infoModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.dismissButton {
+  background-color: #6366f1;
+  color: #fdfdfd;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+.dismissButton:hover {
+  scale: 0.95;
+  transition: all;
+  transition-duration: 0.1s;
+}
+
+.darkDismissButton {
+  color: #f9fafb;
+}
