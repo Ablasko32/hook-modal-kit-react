@@ -90,7 +90,7 @@ export const ModalProvider = ({
    *
    * @param {string} message - The message to display in the confirmation modal.
    * @param {() => void} onConfirm - Callback to trigger when the confirm button is clicked.
-   * @param {IConfirmModal} [options] - Optional configuration for customizing modal appearance.
+   * @param { Partial<Omit<IConfirmModal, "message" | "onClose" | "onConfirm">>} [options] - Optional configuration for customizing modal appearance.
    * @returns {void}
    *
    * @example
@@ -100,7 +100,7 @@ export const ModalProvider = ({
   const showConfirm = (
     message: string,
     onConfirm: () => void,
-    options?: IConfirmModal
+    options?: Partial<Omit<IConfirmModal, "message" | "onClose" | "onConfirm">>
   ): void => {
     const ConfirmComponent = (
       <ConfirmModal
@@ -118,13 +118,16 @@ export const ModalProvider = ({
    * @description Displays an informational modal with a message and a dismiss button.
    *
    * @param {string} message - The message to display in the info modal.
-   * @param {IInfoModal} [options] - Optional configuration for customizing modal appearance.
+   * @param {Partial<Omit<IInfoModal, "message" | "onClose">>} [options] - Optional configuration for customizing modal appearance.
    * @returns {void}
    *
    * @example
    * showInfo("Changes saved successfully.");
    */
-  const showInfo = (message: string, options?: IInfoModal): void => {
+  const showInfo = (
+    message: string,
+    options?: Partial<Omit<IInfoModal, "message" | "onClose">>
+  ): void => {
     const InfoComponent = (
       <InfoModal onClose={closeModal} message={message} {...options} />
     );

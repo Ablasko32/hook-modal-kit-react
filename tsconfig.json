@@ -1,7 +1,25 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "tsBuildInfoFile": "./dist/tsconfig.tsbuildinfo",
+    "target": "ES2022",
+    "lib": ["ES2023", "DOM"], // Add DOM for browser APIs like 'document'
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationDir": "dist",
+    "outDir": "dist",
+    "moduleResolution": "bundler",
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": false,
+    "jsx": "react-jsx", // Enable JSX for React
+    "esModuleInterop": true, // For module compatibility
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
