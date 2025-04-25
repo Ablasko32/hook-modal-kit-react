@@ -1,20 +1,26 @@
 {
   "name": "react-modal-hooks-kit",
   "private": false,
-  "version": "1.1.1",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "version": "1.1.6",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ablasko32/react-modal-hooks-kit"
+  },
   "files": [
     "dist",
-    "src"
+    "package.json",
+    ".npmignore"
   ],
   "type": "module",
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && npm run build:types",
+    "build:types": "tsc",
     "prepublishOnly": "npm run build"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -41,5 +47,11 @@
     "ui",
     "react-library",
     "hook-modal"
-  ]
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  }
 }
