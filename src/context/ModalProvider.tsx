@@ -147,6 +147,21 @@ export const ModalProvider = ({
     return () => document.removeEventListener("click", handleOutsideClick);
   }, []);
 
+  // stop scroll on background while modal is open
+  useEffect(() => {
+    const body = document.querySelector("body");
+    if (!body) return;
+
+    if (isOpen) {
+      body.style.overflow = "hidden";
+    } else {
+      body.style.overflow = "";
+    }
+    return () => {
+      body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   return (
     <ModalContext
       value={{ openModal, closeModal, showConfirm, showInfo, options }}

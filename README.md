@@ -28,9 +28,11 @@ npm install react-hook-modal
 
 1. Wrap your app with ModalProvider
    In your main component (e.g., App.tsx), wrap your application with the ModalProvider to provide modal functionality throughout the app.
+   > Dont forget to import default styles!
 
 ```tsx
 import { ModalProvider } from "react-hook-modal";
+import "react-modal-hooks-kit/styles"; //import styles
 
 function App() {
   return(
