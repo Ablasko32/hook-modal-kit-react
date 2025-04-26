@@ -1,13 +1,13 @@
 {
-  "name": "react-modal-hooks-kit",
+  "name": "hook-modal-kit-react",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Ablasko32/react-modal-hooks-kit"
+    "url": "https://github.com/Ablasko32/hook-modal-kit-react"
   },
   "files": [
     "dist",
@@ -43,7 +43,7 @@
     "react",
     "modal",
     "hook",
-    "react-modal-hooks-kit",
+    "hook-modal-kit-react",
     "ui",
     "react-library",
     "hook-modal"
@@ -54,9 +54,9 @@
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js"
     },
-    "./styles": {
-      "import": "./dist/react-modal-hooks-kit.css",
-      "require": "./dist/react-modal-hooks-kit.css"
+    "./styles.css": {
+      "import": "./dist/hook-modal-kit-react.css",
+      "require": "./dist/hook-modal-kit-react.css"
     }
   }
 }

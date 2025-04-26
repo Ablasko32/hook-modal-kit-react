@@ -8,7 +8,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
-      name: "react-modal-hook-kit",
+      name: "hook-modal-kit-react",
       formats: ["es", "umd"],
       fileName: (format) => `index.${format}.js`,
     },

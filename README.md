@@ -1,4 +1,4 @@
-# React-hook-modal
+# Hook-modal-kit-react
 
 **One context provider and one hook.That's it!**
 
@@ -21,7 +21,7 @@ You can install the package using NPM or Yarn.
 ### NPM
 
 ```bash
-npm install react-hook-modal
+npm install hook-modal-kit-react
 ```
 
 ### ⚙️ Usage
@@ -31,8 +31,8 @@ npm install react-hook-modal
    > Dont forget to import default styles!
 
 ```tsx
-import { ModalProvider } from "react-hook-modal";
-import "react-modal-hooks-kit/styles"; //import styles
+import { ModalProvider } from "hook-modal-kit-react";
+import "hook-modal-kit-react/styles.css"; //import styles
 
 function App() {
   return(
@@ -53,7 +53,7 @@ export default App;
 - closeModal
 
 ```tsx
-import { useModal } from "react-hook-modal";
+import { useModal } from "hook-modal-kit-react";
 
 const { openModal, showConfirm, showInfo, closeModal } = useModal();
 ```
@@ -63,7 +63,8 @@ const { openModal, showConfirm, showInfo, closeModal } = useModal();
 The `ModalProvider` component wraps your application and enables modal functionality throughout your entire app.
 
 ```tsx
-import { ModalProvider } from "react-hook-modal";
+import { ModalProvider } from "hook-modal-kit-react";
+import "hook-modal-kit-react/styles.css"; //import styles
 
 function App() {
   return (
