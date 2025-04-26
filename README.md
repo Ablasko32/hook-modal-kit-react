@@ -1,56 +1,58 @@
-# Hook-modal-kit-react
+# **Hook-modal-kit-react**
 
 **One context provider and one hook.That's it!**
 
 ---
 
-`react-hook-modal` is a simple, customizable modal library for React that uses a context provider and hook for handling modal state. It is designed to make it easy to add modals to your React applications with minimal configuration.
+`hook-modal-kit-react` is a simple, customizable modal library for React that uses a context provider and a hook for handling modal state. It is designed to make it easy to add modals to your React applications with minimal configuration.
 
-### 🚀 Features
+## 🚀 **Features**
 
-**Simple API**: Use the ModalProvider to wrap your app and the useModal hook to open and close modals.
+**✅ Simple API**: Use the `ModalProvider` to wrap your app and the `useModal` hook to open and close modals.
 
-**Customizable**: Style the modal as you see fit.
+**🎨 Customizable**: Style the modal as you see fit.
 
-**Small and Lightweight**: Minimal dependency and easy to integrate into any project.
+**⚡ Small and Lightweight**: Minimal dependency and easy to integrate into any project.
 
-## 📦 Installation
+## 📦 **Installation**
 
 You can install the package using NPM or Yarn.
 
-### NPM
+#### NPM
 
 ```bash
 npm install hook-modal-kit-react
 ```
 
-### ⚙️ Usage
+## ⚙️ **Usage**
 
-1. Wrap your app with ModalProvider
-   In your main component (e.g., App.tsx), wrap your application with the ModalProvider to provide modal functionality throughout the app.
-   > Dont forget to import default styles!
+**1.** Wrap your app with `ModalProvider`
+In your main component (e.g., App.tsx), to provide modal functionality throughout the app.
+
+> Don't forget to import default styles!
 
 ```tsx
 import { ModalProvider } from "hook-modal-kit-react";
 import "hook-modal-kit-react/styles.css"; //import styles
 
 function App() {
-  return(
-  <ModalProvider>
-  <YourAppContent/>
-  </ModalProvider>;
-)};
+  return (
+    <ModalProvider>
+      <YourApp />
+    </ModalProvider>
+  );
+}
 
 export default App;
 ```
 
-2. Use the useModal hook to control the modal.
-   The hook exposes several utility functions.
+**2.** Use the `useModal` hook to control the modal.
+The hook exposes several utility functions.
 
-- openModal
-- showConfirm
-- showInfo
-- closeModal
+- `openModal`
+- `showConfirm`
+- `showInfo`
+- `closeModal`
 
 ```tsx
 import { useModal } from "hook-modal-kit-react";
@@ -58,7 +60,16 @@ import { useModal } from "hook-modal-kit-react";
 const { openModal, showConfirm, showInfo, closeModal } = useModal();
 ```
 
-#### **Provider**
+| Hook                                      | Use case                          |
+| :---------------------------------------- | :-------------------------------- |
+| openModal(content)                        | Opens a modal with any React node |
+| closeModal()                              | Closes the currently open modal   |
+| showConfirm(message, onConfirm, options?) | Opens a confirmation modal        |
+| showInfo(message, options?)               | Opens an info modal               |
+
+## 🛠️ **API Reference**
+
+### **Provider**
 
 The `ModalProvider` component wraps your application and enables modal functionality throughout your entire app.
 
@@ -90,9 +101,9 @@ export interface ModalOptions {
 }
 ```
 
-#### **Hooks**
+### **Hooks**
 
-##### **openModal**
+##### `openModal`
 
 Opens a modal with custom content.
 
@@ -104,7 +115,7 @@ Opens a modal with custom content.
 
 - Use closeModal inside the content to manually close the modal.
 
-##### **closeModal**
+##### `closeModal`
 
 ```tsx
 <button onClick={closeModal}>Close modal</button>
@@ -112,7 +123,7 @@ Opens a modal with custom content.
 
 - Use this in custom modals, buttons, or programmatically.
 
-##### **showConfirm**
+##### `showConfirm`
 
 ```tsx
 <button onClick={() => showConfirm("Are you sure?", onConfirm)}>
@@ -133,7 +144,7 @@ Opens a modal with custom content.
   closeBtnClassName?: string;
 ```
 
-##### **showInfo**
+##### `showInfo`
 
 ```tsx
 <button onClick={() => showInfo("This is notification text!")}>
@@ -153,10 +164,10 @@ Opens a modal with custom content.
 
 With `ModalProvider` and `useModal`, you can build highly flexible modal experiences with clean and simple code.
 
-### 📄 License
+## 📄 **License**
 
 This library is licensed under the **MIT License**.
 
-### Author
+## **Author**
 
-Created by Antonio Blašković
+Created by **Antonio Blašković**
