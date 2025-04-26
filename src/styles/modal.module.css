@@ -14,11 +14,11 @@
   z-index: 99999;
   align-items: center;
   color: #1a1a1a;
-  animation: fadeIn 0.1s ease-in forwards;
+  animation: fadeIn 0.2s ease-in-out forwards;
 }
 
 .closeModalContainer {
-  animation: fadeOut 0.1s ease-out forwards;
+  animation: fadeOut 0.2s ease-in-out forwards;
 }
 
 .darkModalContainer {
@@ -32,11 +32,11 @@
   box-shadow: 0px 0px 1px 0px rgb(0, 0, 0, 0.1);
   position: relative;
   border-radius: 5px;
-  animation: popIn 0.1s ease-in forwards;
+  animation: popIn 0.2s ease-in-out forwards;
 }
 
 .closeModal {
-  animation: popOut 0.1s ease-out forwards;
+  animation: popOut 0.2s ease-in-out forwards;
 }
 
 .darkModal {
@@ -58,10 +58,20 @@
   transition-duration: 0.1s;
 }
 
+.modalContainer,
+.modal {
+  will-change: transform, opacity;
+}
+
 @keyframes popIn {
   0% {
     transform: scale(0.9);
     opacity: 0;
+  }
+
+  50% {
+    transform: scale(0.95);
+    opacity: 0.8;
   }
 
   100% {
@@ -76,6 +86,11 @@
     opacity: 1;
   }
 
+  50% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+
   100% {
     transform: scale(0.9);
     opacity: 0;
@@ -85,6 +100,9 @@
 @keyframes fadeIn {
   0% {
     opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
   }
 
   100% {
@@ -96,7 +114,9 @@
   0% {
     opacity: 1;
   }
-
+  50% {
+    opacity: 0.7;
+  }
   100% {
     opacity: 0;
   }

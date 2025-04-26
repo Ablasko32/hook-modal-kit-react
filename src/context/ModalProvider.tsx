@@ -82,7 +82,7 @@ export const ModalProvider = ({
       setOpen(false);
       setContent(null);
       setClosing(false);
-    }, 100);
+    }, 200);
   };
 
   /**
